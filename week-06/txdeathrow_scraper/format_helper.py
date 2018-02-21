@@ -1,6 +1,7 @@
 from datetime import datetime
 from urllib.parse import urljoin
 import data_helper
+DATA_SRC_URL = 'https://wgetsnaps.github.io/tdcj-state-tx-us-2018/death_row/dr_offenders_on_dr.html'
 
 def txdate_to_iso(datestr):
     
@@ -42,16 +43,9 @@ def calc_years_diff(start_date, end_date):
 
 def make_absolute_url(href):
     
-    import requests
-    resp = requests.get('https://wgetsnaps.github.io/tdcj-state-tx-us-2018/death_row/dr_offenders_on_dr.html')
-    from bs4 import BeautifulSoup
-    soup = BeautifulSoup(resp.text, 'lxml')
-    rows = soup.select('a')
-    a = 'https://wgetsnaps.github.io/tdcj-state-tx-us-2018/death_row/dr_offenders_on_dr.html'
-    b = rows[25]
-    c = b.attrs['href']
-    full_url = urljoin(a, c)
-    return full_url
+    print(href)
+    print("Print working?")
+    return urljoin(DATA_SRC_URL, href)
 
 
 

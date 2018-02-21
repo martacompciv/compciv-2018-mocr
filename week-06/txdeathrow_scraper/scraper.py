@@ -23,8 +23,6 @@ def get_and_parse_inmate_rows():
     soup = BeautifulSoup(resp.text, 'lxml')
     rows = soup.select('tr')[1:]
     return rows
-    
-
 
 def wrangle_inmate_data_from_tag(rowtag):
 

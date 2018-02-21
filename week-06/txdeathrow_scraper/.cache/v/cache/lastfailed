@@ -1,6 +1,4 @@
 {
-  "tests/test_make_absolute_url.py::test_absolute_url_match": true,
-  "tests/test_make_absolute_url.py::test_return_type": true,
   "tests/test_scraper.py": true,
   "tests/test_scraper.py::test_999513_inmate_spotcheck": true,
   "tests/test_scraper.py::test_first_listed_inmate_spotcheck": true,
